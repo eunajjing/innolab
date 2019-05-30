@@ -41,11 +41,9 @@ async function fake() {
 
   await userRepo.save(users);
 
-  await R.pipe(
-    R.splitEvery(500),
-    R.map(messages => messageRepo.save(messages)),
-    results => Promise.all(results)
-  )(messages);
+
+  await Promise.all(R.splitEvery(500, messages)
+    .map(messages => messageRepo.save(messages)))
 }
 
 fake();

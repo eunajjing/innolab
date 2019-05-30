@@ -1,0 +1,32 @@
+{
+  "name": "apollo-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "ts-node scripts/fake.ts",
+    "start": "nodemon",
+    "start:rest": "nodemon --config nodemon.rest.json",
+    "fake": "ts-node scripts/fake.ts"
+  },
+  "dependencies": {
+    "@types/faker": "^4.1.5",
+    "@types/fs-extra": "^5.1.0",
+    "@types/graphql": "^14.2.0",
+    "@types/ramda": "^0.26.8",
+    "apollo-cache-persist": "^0.1.1",
+    "apollo-server": "^2.4.8",
+    "dataloader": "^1.4.0",
+    "faker": "^4.1.0",
+    "fs-extra": "^8.0.0",
+    "graphql": "^14.2.1",
+    "merge-graphql-schemas": "^1.5.8",
+    "nodemon": "^1.19.0",
+    "ramda": "^0.26.1",
+    "reflect-metadata": "^0.1.13",
+    "sqlite3": "^4.0.8",
+    "ts-node": "^8.1.0",
+    "typeorm": "^0.2.17",
+    "typescript": "^3.4.5"
+  }
+}
